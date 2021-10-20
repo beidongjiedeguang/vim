@@ -2,8 +2,8 @@ set encoding=utf-8
 source $HOME/.vim/mappings.vim
 source $HOME/.vim/tabs.vim
 source $HOME/.vim/spellcheck.vim
-source $HOME/.vim/kfj-bundle.vim
-source $HOME/.vim/plugins.vim
+"source $HOME/.vim/kfj-bundle.vim
+"source $HOME/.vim/plugins.vim
 source $HOME/.vim/fonts.vim
 source $HOME/.vim/tagbar.vim
 source $HOME/.vim/abbreviations.vim
@@ -27,7 +27,7 @@ set smartcase
 " Set terminal window title
 set title
 
-colorscheme molokai
+colorscheme elflord
 set cursorline
 
 

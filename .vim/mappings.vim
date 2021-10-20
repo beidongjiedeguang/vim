@@ -8,8 +8,8 @@
 " inoremap <left> <Nop>
 " inoremap <right> <Nop>
 
-" use jk to simulate ESC in the insert mode
-inoremap jk <ESC>
+" use kj  to simulate ESC in the insert mode
+inoremap kj <ESC>
 
 " Map <leader> key
 let mapleader=";"
