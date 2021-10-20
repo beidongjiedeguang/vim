@@ -4,9 +4,9 @@ source $HOME/.vim/tabs.vim
 "source $HOME/.vim/spellcheck.vim
 "source $HOME/.vim/kfj-bundle.vim
 "source $HOME/.vim/plugins.vim
-"source $HOME/.vim/fonts.vim
-"source $HOME/.vim/tagbar.vim
-"source $HOME/.vim/abbreviations.vim
+source $HOME/.vim/fonts.vim
+source $HOME/.vim/tagbar.vim
+source $HOME/.vim/abbreviations.vim
 
 set background=dark
 
@@ -14,6 +14,11 @@ set number
 syntax enable
 syntax on
 set mouse=a
+
+" 支持在Visual模式下，通过C-y复制到系统剪切板
+vnoremap <C-y> "+y
+" 支持在normal模式下，通过C-p粘贴系统剪切板
+nnoremap <C-p> "*p
 
 " Disable backups and .swp files
 set nobackup
@@ -52,7 +57,7 @@ autocmd BufRead,BufNewFile *.cu set filetype=cpp
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " press ctrl + L to remove highlighted search results
-"nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
+nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
 " Disable highlighting matched parentheses. It's really annoying.
 let g:loaded_matchparen=1
