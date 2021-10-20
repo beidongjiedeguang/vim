@@ -1,12 +1,12 @@
 set encoding=utf-8
 source $HOME/.vim/mappings.vim
 source $HOME/.vim/tabs.vim
-source $HOME/.vim/spellcheck.vim
+"source $HOME/.vim/spellcheck.vim
 "source $HOME/.vim/kfj-bundle.vim
 "source $HOME/.vim/plugins.vim
-source $HOME/.vim/fonts.vim
-source $HOME/.vim/tagbar.vim
-source $HOME/.vim/abbreviations.vim
+"source $HOME/.vim/fonts.vim
+"source $HOME/.vim/tagbar.vim
+"source $HOME/.vim/abbreviations.vim
 
 set background=dark
 
@@ -52,7 +52,7 @@ autocmd BufRead,BufNewFile *.cu set filetype=cpp
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " press ctrl + L to remove highlighted search results
-nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
+"nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
 " Disable highlighting matched parentheses. It's really annoying.
 let g:loaded_matchparen=1
