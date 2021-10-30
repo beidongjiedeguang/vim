@@ -3,7 +3,7 @@ if [ ! -e ~/.kunyuan.sh ]; then
   cat >> ~/.kunyuan.sh << EOF
 set -o vi
 bind -x '"\C-l": clear'
-bind '"jk":vi-movement-mode'
+bind '"kj":vi-movement-mode'
 
 export EDITOR=vim
 EOF
