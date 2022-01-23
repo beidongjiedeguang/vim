@@ -8,7 +8,7 @@
 
 安装vim 目录:  
 ```bash
-git clone ---depth 1 \
+git clone --depth=1 \
 https://github.com/preservim/nerdtree.git \
 ~/.vim/pack/vendor/start/nerdtree
 ```
