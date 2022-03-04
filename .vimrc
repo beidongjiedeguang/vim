@@ -79,10 +79,10 @@ let g:loaded_matchparen=1
 let g:ctrlp_custom_ignore = 'data\|DS_Store\|.git'
 
 " 添加自动插件 autoload, 但打开后会变慢！比较难受...
-"execute pathogen#infect()
-"filetype plugin indent on
+execute pathogen#infect()
+filetype plugin indent on
 
-filetype plugin on
+"filetype plugin on
 " press F5 to exec current Python code"
 map <F5> :call PRUN()<CR>
 func! PRUN()
