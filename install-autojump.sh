@@ -10,8 +10,8 @@ else
 fi
 
 
-if ! grep "autojump" ~/.fangjun.sh &> /dev/null; then
-  echo "[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh" >> $HOME/.fangjun.sh
+if ! grep "autojump" ~/.kunyuan.sh &> /dev/null; then
+  echo "[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh" >> $HOME/.kunyuan.sh
 fi
 
 echo "Done"

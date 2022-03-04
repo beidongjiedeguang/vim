@@ -8,6 +8,6 @@
 " inoremap <left> <Nop>
 " inoremap <right> <Nop>
 
-" use jk to simulate ESC in the insert mode
-inoremap jk <ESC>
+inoremap kj <ESC>
+inoremap KJ <ESC>
 

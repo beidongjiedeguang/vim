@@ -44,6 +44,17 @@ set foldmarker={,}
 set foldlevel=1
 set nofoldenable "disable fold by default
 
+let python_highlight_all=1
+au Filetype python set tabstop=4
+au Filetype python set softtabstop=4
+au Filetype python set shiftwidth=4
+au Filetype python set textwidth=79
+au Filetype python set expandtab
+au Filetype python set autoindent
+au Filetype python set fileformat=unix
+autocmd Filetype python set foldmethod=indent
+autocmd Filetype python set foldlevel=99
+
 " for "find", "ls" and "b"
 set path+=**
 set wildmenu
@@ -66,4 +77,18 @@ nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 let g:loaded_matchparen=1
 
 let g:ctrlp_custom_ignore = 'data\|DS_Store\|.git'
+
+" 添加自动插件 autoload, 但打开后会变慢！比较难受...
+"execute pathogen#infect()
+"filetype plugin indent on
+
+filetype plugin on
+" press F5 to exec current Python code"
+map <F5> :call PRUN()<CR>
+func! PRUN()
+    exec "w"
+    if &filetype == 'python'
+        exec "!python %"
+    endif
+endfunc
 
