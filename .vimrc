@@ -82,13 +82,35 @@ let g:ctrlp_custom_ignore = 'data\|DS_Store\|.git'
 execute pathogen#infect()
 filetype plugin indent on
 
-"filetype plugin on
 " press F5 to exec current Python code"
-map <F5> :call PRUN()<CR>
-func! PRUN()
-    exec "w"
-    if &filetype == 'python'
-        exec "!python %"
-    endif
-endfunc
+"
+"map <F5> :call PRUN()<CR>
+"func! PRUN()
+"    exec "w"
+"    if &filetype == 'python'
+"        exec "!python %"
+"    endif
+"endfunc
 
+
+" press F5 to exec current Python code (Debug version)"
+" pip install line_profiler
+nnoremap <F5> :call CompileRunGcc()<cr>
+
+func! CompileRunGcc()
+          exec "w"
+          if &filetype == 'python'
+                  if search("@profile")
+                          exec "AsyncRun kernprof -l -v %"
+                          exec "copen"
+                          exec "wincmd p"
+                  elseif search("set_trace()")
+                          exec "!python3 %"
+                  else
+                          exec "AsyncRun -raw python3 %"
+                          exec "copen"
+                          exec "wincmd p"
+                  endif
+          endif
+
+endfunc
